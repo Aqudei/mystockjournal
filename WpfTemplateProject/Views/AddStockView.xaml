@@ -1,0 +1,25 @@
+﻿<mah:MetroWindow x:Class="StockJournal.Views.AddStockView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        Title="AddStockView" Height="196.463" Width="514.634" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Label Content="Buy Price" HorizontalAlignment="Left" Margin="48,49,0,0" VerticalAlignment="Top"/>
+        <mah:NumericUpDown x:Name="BuyPricePerShare" HorizontalAlignment="Left" Height="28" Margin="163,49,0,0" 
+                           VerticalAlignment="Top" Width="303" TabIndex="2"/>
+        <Label Content="Symbol:" HorizontalAlignment="Left" Margin="48,18,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="Symbols" Text="{Binding Symbol, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                  HorizontalAlignment="Left" Height="23" Margin="163,18,0,0"
+                  VerticalAlignment="Top" Width="303" IsEditable="True" TabIndex="1"/>
+        <Label Content="Buy Date:" HorizontalAlignment="Left" Margin="48,82,0,0" VerticalAlignment="Top"/>
+        <mah:DateTimePicker SelectedDate ="{Binding BuyDate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            HorizontalAlignment="Left" Height="23" Margin="163,82,0,0"
+                            VerticalAlignment="Top" Width="303" TabIndex="3"/>
+        <Button x:Name="Save" Content="Save" HorizontalAlignment="Left" Margin="391,130,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="Close" Content="Done" HorizontalAlignment="Left" Margin="299,130,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</mah:MetroWindow>
